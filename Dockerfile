@@ -1,1 +1,1 @@
-FROM node:fermium
+FROM node:gallium
