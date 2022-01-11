@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:base"
+  ],
+  packageRules: [
+    {
+      // This rule ensures that the Node.js versioning logic is used for upgrading the node Docker image.
+      // See https://github.com/renovatebot/renovate/discussions/10163 for details.
+      matchDatasources: ["docker"],
+      matchPackageNames: ["node"],
+      versioning: "node"
+    }
+  ]
+}
